@@ -1,0 +1,50 @@
+ string[] input = {"90112511111111", "Ernas", "Daniel", "1", "0", "1"};
+
+ //9011251111
+ //199011251111
+ //901125-1111
+ //19901125-1111
+
+ foreach (var number in input[0])
+ {
+     if(!char.IsDigit(number))
+     {
+         if(number != '-')
+         {
+             Console.WriteLine($"{number} is incorrect");
+         }
+     }
+ }
+
+ if (input[0].Length < 10 || input[0].Length > 13)
+ {
+     Console.WriteLine("Incorrect form");
+ }
+
+ if (input.Length < 6)
+ {
+     Console.WriteLine("Incorrect");
+ }
+
+ for (int i = 0; i < input.Length; i++)
+ {
+     if (string.IsNullOrWhiteSpace(input[i]))
+     {
+         Console.WriteLine($"Value at index {i} is missing or empty.");
+     }
+ }
+
+ if (!input[3].All(char.IsDigit))
+ {
+
+ }
+
+ if (!input[4].All(char.IsDigit))
+ {
+
+ }
+
+ if (!input[5].All(char.IsDigit))
+ {
+
+ }
